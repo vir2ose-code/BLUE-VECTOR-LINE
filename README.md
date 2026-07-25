@@ -27,6 +27,7 @@ Official repository and digital distribution hub for the **BLUE VECTOR Line** bo
 ##  Official Website & Downloads
 
 Visit our official boutique landing page to download 14-day full trials or purchase licenses:
+
 👉 **[plugins.waldemar-krucinski.com](https://plugins.waldemar-krucinski.com)**
 
 ---
