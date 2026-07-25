@@ -23,7 +23,6 @@
         }
 
         body {
-            /* Hintergrundbild aus deinem Repo */
             background: url('background.png') no-repeat center center fixed;
             background-size: cover;
             color: var(--text-light);
@@ -41,24 +40,22 @@
             justify-content: space-between;
         }
 
-        /* Container nach unten geschoben für freie Sicht auf die Plugins */
         .main-container {
             max-width: 1250px;
             width: 100%;
             padding: 2rem 1.5rem 2.5rem;
-            margin: auto auto 1rem auto; /* Drückt den Content nach unten */
+            margin: auto auto 1rem auto;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        /* Raster für beide Produkte nebeneinander */
         .products-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
             gap: 2.5rem;
             width: 100%;
-            margin-top: 120px; /* Gibt den grafischen Plugin-Modulen im Hintergrund Luft */
+            margin-top: 120px;
         }
 
         .product-card {
@@ -114,7 +111,6 @@
             text-align: center;
         }
 
-        /* Goldener Haupt-Button (Kaufen) */
         .btn-primary {
             background: linear-gradient(135deg, #ffd700 0%, #b8860b 100%);
             color: #000;
@@ -128,7 +124,6 @@
             background: linear-gradient(135deg, #ffe033 0%, #d49b0e 100%);
         }
 
-        /* Dunkler Button (Trial Download) */
         .btn-secondary {
             background-color: rgba(10, 10, 15, 0.85);
             color: var(--gold-main);
@@ -173,7 +168,6 @@
             border-top: 1px solid rgba(212, 175, 55, 0.2);
         }
 
-        /* Responsives Verhalten für mobile Bildschirme */
         @media (max-width: 768px) {
             .products-grid {
                 margin-top: 20px;
@@ -197,8 +191,8 @@
                     </div>
 
                     <div class="cta-buttons">
-                        <!-- Stripe Link für EQ -->
-                        <a href="https://buy.stripe.com/test_00w8wOfOwdDiaPn1WA9sk01" class="btn btn-primary" target="_blank">VPPEQ-1 Kaufen (39,99 €)</a>
+                        <!-- Stripe Live-Link für EQ -->
+                        <a href="https://buy.stripe.com/3cI9AT9UA84o13N7XP1Jm01" class="btn btn-primary" target="_blank">VPPEQ-1 Kaufen (39,99 €)</a>
                         <!-- Installer Download EQ -->
                         <a href="https://github.com/vir2ose-code/VPPEQ-1-Equalizer/releases/download/v1.0.0/VPPEQ-1_Setup_v1.0.0.exe" class="btn btn-secondary" target="_blank">14-Tage Trial Download</a>
                     </div>
@@ -220,8 +214,8 @@
                     </div>
 
                     <div class="cta-buttons">
-                        <!-- Stripe Link für Compressor -->
-                        <a href="https://buy.stripe.com/test_vdc2_compressor_link" class="btn btn-primary" target="_blank">VDC 2.0 Kaufen (39,99 €)</a>
+                        <!-- Stripe Live-Link für Compressor -->
+                        <a href="https://buy.stripe.com/5kQ8wPaYE5Wg6o75PH1Jm00" class="btn btn-primary" target="_blank">VDC 2.0 Kaufen (39,99 €)</a>
                         <!-- Direkter Release-Download für Compressor -->
                         <a href="https://github.com/vir2ose-code/BLUE-VECTOR-LINE/releases/download/v2.0.0/VDC_2.0_Installer_x64.exe" class="btn btn-secondary" target="_blank">14-Tage Trial Download</a>
                     </div>
