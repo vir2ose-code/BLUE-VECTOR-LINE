@@ -41,28 +41,11 @@
             justify-content: space-between;
         }
 
-        header {
-            width: 100%;
-            max-width: 1300px;
-            margin: 0 auto;
-            padding: 2rem 2rem 1rem;
-            display: flex;
-            justify-content: flex-start;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 900;
-            letter-spacing: 1.5px;
-            color: var(--gold-main);
-            text-shadow: 0 0 15px var(--gold-glow);
-        }
-
-        /* Container nach unten schieben, um freie Sicht auf die Plugins zu gewähren */
+        /* Container nach unten geschoben für freie Sicht auf die Plugins */
         .main-container {
             max-width: 1250px;
             width: 100%;
-            padding: 1rem 1.5rem 2.5rem;
+            padding: 2rem 1.5rem 2.5rem;
             margin: auto auto 1rem auto; /* Drückt den Content nach unten */
             display: flex;
             flex-direction: column;
@@ -75,7 +58,7 @@
             grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
             gap: 2.5rem;
             width: 100%;
-            margin-top: 100px; /* Platzhalter, damit die obere Plugin-Grafik frei bleibt */
+            margin-top: 120px; /* Gibt den grafischen Plugin-Modulen im Hintergrund Luft */
         }
 
         .product-card {
@@ -200,9 +183,6 @@
 </head>
 <body>
     <div class="overlay">
-        <header>
-            <div class="logo">vir2oseSOUND</div>
-        </header>
 
         <div class="main-container">
             <div class="products-grid">
@@ -240,7 +220,7 @@
                     </div>
 
                     <div class="cta-buttons">
-                        <!-- Stripe Link für Compressor (Später mit Deinem echten Live-Link austauschen) -->
+                        <!-- Stripe Link für Compressor -->
                         <a href="https://buy.stripe.com/test_vdc2_compressor_link" class="btn btn-primary" target="_blank">VDC 2.0 Kaufen (39,99 €)</a>
                         <!-- Installer Download Compressor -->
                         <a href="downloads/VDC_2.0_Installer_x64.exe" class="btn btn-secondary" download>14-Tage Trial Download</a>
