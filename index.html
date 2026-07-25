@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VPPEQ-1 Equalizer | vir2oseSOUND</title>
+    <title>vir2oseSOUND | Blue Vector Line VST3 Plugins</title>
     <style>
         :root {
             --gold-main: #ffd700;
             --gold-dark: #b8860b;
             --gold-glow: rgba(255, 215, 0, 0.4);
             --bg-dark: rgba(10, 10, 12, 0.85);
-            --card-bg: rgba(15, 18, 25, 0.75);
+            --card-bg: rgba(15, 18, 25, 0.82);
             --text-light: #f3f4f6;
             --text-gold: #e6ca65;
         }
@@ -23,90 +23,115 @@
         }
 
         body {
-            /* Hier wird dein Photoshop-Zahnrad-Hintergrund eingebunden */
-            background: url('background.png') no-repeat center center fixed;
+            /* Hintergrundbild mit deinen zwei Plugin-Fenstern */
+            background: url('background.jpg') no-repeat center center fixed;
             background-size: cover;
             color: var(--text-light);
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            align-items: center;
-            justify-content: space-between;
         }
 
-        /* Dunkler Overlay-Effekt für bessere Lesbarkeit */
         .overlay {
             width: 100%;
             min-height: 100vh;
-            background: radial-gradient(circle, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.85) 100%);
+            background: radial-gradient(circle, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.85) 100%);
             display: flex;
             flex-direction: column;
-            align-items: center;
+            justify-content: space-between;
         }
 
         header {
             width: 100%;
-            max-width: 1100px;
-            padding: 2rem 1.5rem 1rem;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 2rem 2rem 1rem;
             display: flex;
             justify-content: flex-start;
         }
 
         .logo {
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             font-weight: 900;
             letter-spacing: 1.5px;
             color: var(--gold-main);
-            text-shadow: 0 0 12px var(--gold-glow);
+            text-shadow: 0 0 15px var(--gold-glow);
         }
 
-        .container {
-            max-width: 1000px;
+        /* Container nach unten schieben, um freie Sicht auf die Plugins zu gewähren */
+        .main-container {
+            max-width: 1250px;
             width: 100%;
-            padding: 1rem 1.5rem 3rem;
+            padding: 1rem 1.5rem 2.5rem;
+            margin: auto auto 1rem auto; /* Drückt den Content nach unten */
             display: flex;
             flex-direction: column;
             align-items: center;
+        }
+
+        /* Raster für beide Produkte nebeneinander */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2.5rem;
+            width: 100%;
+            margin-top: 100px; /* Platzhalter, damit die obere Plugin-Grafik frei bleibt */
+        }
+
+        .product-card {
+            background-color: var(--card-bg);
+            padding: 2rem;
+            border-radius: 14px;
+            border: 1px solid var(--gold-dark);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.8);
+            backdrop-filter: blur(12px);
             text-align: center;
-            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease, border-color 0.3s ease;
         }
 
-        .hero-title {
-            font-size: 3.5rem;
+        .product-card:hover {
+            border-color: var(--gold-main);
+            transform: translateY(-5px);
+        }
+
+        .product-title {
+            font-size: 2.2rem;
             font-weight: 900;
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.5rem;
             color: var(--gold-main);
-            text-shadow: 0 2px 10px rgba(0,0,0,0.9), 0 0 20px var(--gold-glow);
+            text-shadow: 0 2px 10px rgba(0,0,0,0.9), 0 0 15px var(--gold-glow);
         }
 
-        .hero-subtitle {
-            font-size: 1.15rem;
+        .product-subtitle {
+            font-size: 0.98rem;
             color: #d1d5db;
-            max-width: 750px;
-            margin-bottom: 2.5rem;
-            line-height: 1.6;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+            min-height: 3rem;
         }
 
         .cta-buttons {
             display: flex;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-bottom: 3.5rem;
+            flex-direction: column;
+            gap: 0.8rem;
+            margin-bottom: 1.5rem;
         }
 
         .btn {
-            padding: 1rem 2.2rem;
-            font-size: 1.05rem;
+            padding: 0.9rem 1.5rem;
+            font-size: 1rem;
             font-weight: 800;
             border-radius: 8px;
             text-decoration: none;
             transition: all 0.3s ease;
             cursor: pointer;
+            text-align: center;
         }
 
-        /* Goldener Haupt-Button */
+        /* Goldener Haupt-Button (Kaufen) */
         .btn-primary {
             background: linear-gradient(135deg, #ffd700 0%, #b8860b 100%);
             color: #000;
@@ -115,67 +140,61 @@
         }
 
         .btn-primary:hover {
-            transform: translateY(-3px);
+            transform: translateY(-2px);
             box-shadow: 0 0 25px rgba(255, 215, 0, 0.7);
             background: linear-gradient(135deg, #ffe033 0%, #d49b0e 100%);
         }
 
-        /* Sekundärer dunkler Button mit Goldrand */
+        /* Dunkler Button (Trial Download) */
         .btn-secondary {
-            background-color: rgba(15, 15, 20, 0.8);
+            background-color: rgba(10, 10, 15, 0.85);
             color: var(--gold-main);
             border: 1px solid var(--gold-dark);
-            backdrop-filter: blur(5px);
         }
 
         .btn-secondary:hover {
             background-color: rgba(255, 215, 0, 0.15);
             border-color: var(--gold-main);
-            transform: translateY(-3px);
+            transform: translateY(-2px);
         }
 
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            width: 100%;
-        }
-
-        .feature-card {
-            background-color: var(--card-bg);
-            padding: 1.8rem;
-            border-radius: 12px;
-            border: 1px solid var(--gold-dark);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-            backdrop-filter: blur(10px);
+        .feature-list {
             text-align: left;
-            transition: border-color 0.3s ease;
+            border-top: 1px solid rgba(255, 215, 0, 0.2);
+            padding-top: 1rem;
         }
 
-        .feature-card:hover {
-            border-color: var(--gold-main);
-        }
-
-        .feature-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0.6rem;
-            color: var(--gold-main);
-        }
-
-        .feature-card p {
+        .feature-item {
+            font-size: 0.88rem;
             color: #9ca3af;
-            font-size: 0.95rem;
-            line-height: 1.5;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .feature-item::before {
+            content: "•";
+            color: var(--gold-main);
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-right: 0.5rem;
         }
 
         footer {
             width: 100%;
-            padding: 1.5rem 0;
+            padding: 1.2rem 0;
             text-align: center;
             color: #6b7280;
             font-size: 0.85rem;
-            background-color: rgba(5, 5, 5, 0.9);
+            background-color: rgba(5, 5, 5, 0.95);
             border-top: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        /* Responsives Verhalten für mobile Bildschirme */
+        @media (max-width: 768px) {
+            .products-grid {
+                margin-top: 20px;
+            }
         }
     </style>
 </head>
@@ -185,33 +204,55 @@
             <div class="logo">vir2oseSOUND</div>
         </header>
 
-        <div class="container">
-            <h1 class="hero-title">VPPEQ-1 Equalizer</h1>
-            <p class="hero-subtitle">
-                Professional Parametric Equalizer inspired by classic boutique hardware. 
-                Delivering musical warmth, harmonic saturation, and pristine clarity for modern producers.
-            </p>
+        <div class="main-container">
+            <div class="products-grid">
+                
+                <!-- PRODUKT 1: VPPEQ-1 EQUALIZER -->
+                <div class="product-card">
+                    <div>
+                        <h1 class="product-title">VPPEQ-1 Equalizer</h1>
+                        <p class="product-subtitle">
+                            Professional 7-Band Parametric Equalizer inspired by classic boutique hardware with pristine harmonic saturation.
+                        </p>
+                    </div>
 
-            <div class="cta-buttons">
-                <!-- Neuer 39,99 € Stripe-Link -->
-                <a href="https://buy.stripe.com/test_00w8wOfOwdDiaPn1WA9sk01" class="btn btn-primary" target="_blank">Jetzt Kaufen (39,99 €)</a>
-                <!-- Direkter Download der Setup.exe -->
-                <a href="https://github.com/vir2ose-code/VPPEQ-1-Equalizer/releases/download/v1.0.0/VPPEQ-1_Setup_v1.0.0.exe" class="btn btn-secondary" target="_blank">14-Tage Trial Download</a>
-            </div>
+                    <div class="cta-buttons">
+                        <!-- Stripe Link für EQ -->
+                        <a href="https://buy.stripe.com/test_00w8wOfOwdDiaPn1WA9sk01" class="btn btn-primary" target="_blank">VPPEQ-1 Kaufen (39,99 €)</a>
+                        <!-- Installer Download EQ -->
+                        <a href="https://github.com/vir2ose-code/VPPEQ-1-Equalizer/releases/download/v1.0.0/VPPEQ-1_Setup_v1.0.0.exe" class="btn btn-secondary" target="_blank">14-Tage Trial Download</a>
+                    </div>
 
-            <div class="features">
-                <div class="feature-card">
-                    <h3>Analog Character</h3>
-                    <p>Transformer emulation with 4 legendary curves (SSL, NEVE, API, PULTEC) for smooth saturation.</p>
+                    <div class="feature-list">
+                        <div class="feature-item">4 Analog Curves (SSL, NEVE, API, PULTEC)</div>
+                        <div class="feature-item">High-Precision JUCE C++ DSP Engine</div>
+                        <div class="feature-item">Custom VU-Metering & Phase Alignment</div>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <h3>Pro DSP & Metering</h3>
-                    <p>Custom VU-metering, phase alignment, and high-precision audio processing built on JUCE/C++.</p>
+
+                <!-- PRODUKT 2: DYNAMIC COMPRESSOR VDC 2.0 -->
+                <div class="product-card">
+                    <div>
+                        <h1 class="product-title">VDC 2.0 Compressor</h1>
+                        <p class="product-subtitle">
+                            Precision VCA/Opto Dynamic Compressor with 60fps dynamic curve display and golden fader controls.
+                        </p>
+                    </div>
+
+                    <div class="cta-buttons">
+                        <!-- Stripe Link für Compressor (Später mit Deinem echten Live-Link austauschen) -->
+                        <a href="https://buy.stripe.com/test_vdc2_compressor_link" class="btn btn-primary" target="_blank">VDC 2.0 Kaufen (39,99 €)</a>
+                        <!-- Installer Download Compressor -->
+                        <a href="downloads/VDC_2.0_Installer_x64.exe" class="btn btn-secondary" download>14-Tage Trial Download</a>
+                    </div>
+
+                    <div class="feature-list">
+                        <div class="feature-item">60fps Dynamic Transfer Curve & Neon Indicator</div>
+                        <div class="feature-item">4 EQ Characters influencing Compression Knee</div>
+                        <div class="feature-item">Calibrated Dual-Channel L/R LED VU-Meter</div>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <h3>Modern Scalable UI</h3>
-                    <p>Clean, hardware-inspired interface with 100% smooth scaling for crisp modern displays.</p>
-                </div>
+
             </div>
         </div>
 
