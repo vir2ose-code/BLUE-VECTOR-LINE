@@ -1,38 +1,43 @@
-#  VPPEQ-1 Equalizer | Blue Vector Line
+# BLUE VECTOR Line | VST3 Audio Plugins by vir2oseSOUND
 
-![Version](https://img.shields.io/badge/version-1.0.0-gold)
+![Version](https://img.shields.io/badge/version-2.0.0-gold)
 ![Format](https://img.shields.io/badge/format-VST3-blue)
-![Platform](https://img.shields.io/badge/platform-Windows%2064--bit-black)
-![Framework](https://img.shields.io/badge/built%20with-JUCE%20%2F%20C%2B%2B-00599C)
+![Platform](https://img.shields.io/badge/platform-Windows_64bit-lightgrey)
+![Framework](https://img.shields.io/badge/built_with-JUCE_%2F_C%2B%2B-orange)
 
-> **Professional Parametric Equalizer inspired by classic boutique hardware.**  
-> Delivering musical warmth, harmonic saturation, and pristine clarity for modern audio engineers and music producers.
-
----
-
-##  Features
-
-* **Analog Character Emulation:** Built-in transformer saturation curves with 4 legendary characteristics (**SSL**, **NEVE**, **API**, **PULTEC**).
-* **7-Band Precision EQ:** High-Pass Filter (HP), Low-Pass Filter (LP), Low Frequency (LF), Low-Mid (LMF), Mid (MF), High-Mid (HMF), and High Frequency (HF) bands.
-* **Pro DSP & Metering:** Custom-designed stufenlose VU-metering, accurate gain staging, and precise audio processing.
-* **Modern Scalable UI:** Hardware-inspired interface built in JUCE/C++ with 100% smooth display scaling.
-* **Built-in Licensing System:** Easy activation via LicenseSeat with integrated 14-day full trial mode.
+Official repository and digital distribution hub for the **BLUE VECTOR Line** boutique audio plugins by **vir2oseSOUND**. High-precision C++/JUCE DSP combined with classic hardware-inspired analog saturation.
 
 ---
 
-##  Official Website & Checkout
+##  Included Plugins
 
-Visit our official boutique landing page to download the trial or purchase a license:
+### 1. VPPEQ-1 Equalizer
+* **7-Band Precision EQ:** High-Pass, Low-Pass, High-Band, Low-Band, and 3 Parametric Mid Bands.
+* **4 Analog Saturation Curves:** Switchable SSL, NEVE, API, and PULTEC transformer emulation.
+* **Pro DSP & Metering:** Phase alignment and calibrated custom VU metering.
+
+### 2. Dynamic Compressor VDC 2.0
+* **Feed-Forward VCA/Opto Dynamics:** Precise compression with smooth knee control.
+* **Dynamic Transfer Curve Display:** Real-time 60fps vector display with neon glow live-signal indicator.
+* **4 EQ Character Modes:** SSL, NEVE, API, and PULTEC curves influencing compression knee and harmonic drive.
+* **Dual-Channel L/R LED VU-Meter:** Accurate peak/RMS output level monitoring.
+
+---
+
+##  Official Website & Downloads
+
+Visit our official boutique landing page to download 14-day full trials or purchase licenses:
 👉 **[plugins.waldemar-krucinski.com](https://plugins.waldemar-krucinski.com)**
 
 ---
 
 ##  Installation
 
-1. Go to the [Releases Page](https://github.com/vir2ose-code/VPPEQ-1-Equalizer/releases).
-2. Download the `VPPEQ-1_Setup_v1.0.0.exe` installer.
-3. Run the setup file and follow the instructions.
-4. Open your favorite DAW (Cubase, Ableton, FL Studio, Reaper, Studio One, etc.) and rescan your VST3 plugins.
+1. Go to the **Releases Page** or download the installers directly from our website.
+2. Run `VPPEQ-1_Setup_v1.0.0.exe` for the Equalizer.
+3. Run `VDC_2.0_Installer_x64.exe` for the Dynamic Compressor.
+4. Follow the setup wizard instructions (installs automatically to `C:\Program Files\Common Files\VST3`).
+5. Open your DAW (Cubase, Studio One, Ableton, FL Studio, Reaper, etc.) and rescan VST3 plugins.
 
 ---
 
@@ -49,7 +54,7 @@ Visit our official boutique landing page to download the trial or purchase a lic
 
 Developed with passion by **vir2oseSOUND / Waldemar Krucinski**.
 
-* **Website:** [waldemar-krucinski.com](https://www.waldemar-krucinski.com)
+* **Website:** [waldemar-krucinski.com](https://waldemar-krucinski.com)
 * **Plugin Store:** [plugins.waldemar-krucinski.com](https://plugins.waldemar-krucinski.com)
 
 © 2026 vir2oseSOUND. All rights reserved.
