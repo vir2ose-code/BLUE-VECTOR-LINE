@@ -23,8 +23,8 @@
         }
 
         body {
-            /* Hintergrundbild mit deinen zwei Plugin-Fenstern */
-            background: url('background.jpg') no-repeat center center fixed;
+            /* Hintergrundbild aus deinem Repo */
+            background: url('background.png') no-repeat center center fixed;
             background-size: cover;
             color: var(--text-light);
             display: flex;
@@ -222,8 +222,8 @@
                     <div class="cta-buttons">
                         <!-- Stripe Link für Compressor -->
                         <a href="https://buy.stripe.com/test_vdc2_compressor_link" class="btn btn-primary" target="_blank">VDC 2.0 Kaufen (39,99 €)</a>
-                        <!-- Installer Download Compressor -->
-                        <a href="downloads/VDC_2.0_Installer_x64.exe" class="btn btn-secondary" download>14-Tage Trial Download</a>
+                        <!-- Direkter Release-Download für Compressor -->
+                        <a href="https://github.com/vir2ose-code/BLUE-VECTOR-LINE/releases/download/v2.0.0/VDC_2.0_Installer_x64.exe" class="btn btn-secondary" target="_blank">14-Tage Trial Download</a>
                     </div>
 
                     <div class="feature-list">
@@ -239,7 +239,10 @@
         <footer>
             &copy; 2026 vir2oseSOUND / Waldemar Krucinski. All rights reserved.
         </footer>
-        <div style="display: none !important; visibility: hidden;">
+    </div>
+
+    <!-- Unsichtbare Bilder für KVR Audio / externe Einbindungen -->
+    <div style="display: none !important; visibility: hidden;">
         <img src="vdc2.png" alt="VDC 2.0 Compressor Preview">
         <img src="vppeq-1.png" alt="VPPEQ-1 Equalizer Preview">
     </div>
