@@ -14,15 +14,14 @@
             --text-light: #f3f4f6;
             --text-gold: #e6ca65;
         }
-
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
         }
-
         body {
+            /* Hintergrundbild aus deinem Repo */
             background: url('background.png') no-repeat center center fixed;
             background-size: cover;
             color: var(--text-light);
@@ -30,7 +29,6 @@
             flex-direction: column;
             min-height: 100vh;
         }
-
         .overlay {
             width: 100%;
             min-height: 100vh;
@@ -39,9 +37,9 @@
             flex-direction: column;
             justify-content: space-between;
         }
-
+        /* Container nach unten geschoben für freie Sicht auf die Plugins */
         .main-container {
-            max-width: 1250px;
+            max-width: 1400px;
             width: 100%;
             padding: 2rem 1.5rem 2.5rem;
             margin: auto auto 1rem auto;
@@ -49,18 +47,17 @@
             flex-direction: column;
             align-items: center;
         }
-
+        /* 3er-Raster für alle drei Produkte nebeneinander */
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 2.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
             width: 100%;
             margin-top: 120px;
         }
-
         .product-card {
             background-color: var(--card-bg);
-            padding: 2rem;
+            padding: 1.8rem;
             border-radius: 14px;
             border: 1px solid var(--gold-dark);
             box-shadow: 0 15px 35px rgba(0,0,0,0.8);
@@ -71,38 +68,33 @@
             justify-content: space-between;
             transition: transform 0.3s ease, border-color 0.3s ease;
         }
-
         .product-card:hover {
             border-color: var(--gold-main);
             transform: translateY(-5px);
         }
-
         .product-title {
-            font-size: 2.2rem;
+            font-size: 2rem;
             font-weight: 900;
             margin-bottom: 0.5rem;
             color: var(--gold-main);
             text-shadow: 0 2px 10px rgba(0,0,0,0.9), 0 0 15px var(--gold-glow);
         }
-
         .product-subtitle {
-            font-size: 0.98rem;
+            font-size: 0.95rem;
             color: #d1d5db;
             margin-bottom: 1.5rem;
             line-height: 1.5;
-            min-height: 3rem;
+            min-height: 3.5rem;
         }
-
         .cta-buttons {
             display: flex;
             flex-direction: column;
             gap: 0.8rem;
             margin-bottom: 1.5rem;
         }
-
         .btn {
-            padding: 0.9rem 1.5rem;
-            font-size: 1rem;
+            padding: 0.9rem 1.2rem;
+            font-size: 0.98rem;
             font-weight: 800;
             border-radius: 8px;
             text-decoration: none;
@@ -110,46 +102,41 @@
             cursor: pointer;
             text-align: center;
         }
-
+        /* Goldener Haupt-Button (Kaufen) */
         .btn-primary {
             background: linear-gradient(135deg, #ffd700 0%, #b8860b 100%);
             color: #000;
             border: 1px solid #ffe600;
             box-shadow: 0 0 15px var(--gold-glow), inset 0 1px 0 rgba(255,255,255,0.5);
         }
-
         .btn-primary:hover {
             transform: translateY(-2px);
             box-shadow: 0 0 25px rgba(255, 215, 0, 0.7);
             background: linear-gradient(135deg, #ffe033 0%, #d49b0e 100%);
         }
-
+        /* Dunkler Button (Trial Download) */
         .btn-secondary {
             background-color: rgba(10, 10, 15, 0.85);
             color: var(--gold-main);
             border: 1px solid var(--gold-dark);
         }
-
         .btn-secondary:hover {
             background-color: rgba(255, 215, 0, 0.15);
             border-color: var(--gold-main);
             transform: translateY(-2px);
         }
-
         .feature-list {
             text-align: left;
             border-top: 1px solid rgba(255, 215, 0, 0.2);
             padding-top: 1rem;
         }
-
         .feature-item {
-            font-size: 0.88rem;
+            font-size: 0.85rem;
             color: #9ca3af;
             margin-bottom: 0.5rem;
             display: flex;
             align-items: center;
         }
-
         .feature-item::before {
             content: "•";
             color: var(--gold-main);
@@ -157,7 +144,6 @@
             font-size: 1.2rem;
             margin-right: 0.5rem;
         }
-
         footer {
             width: 100%;
             padding: 1.2rem 0;
@@ -167,7 +153,6 @@
             background-color: rgba(5, 5, 5, 0.95);
             border-top: 1px solid rgba(212, 175, 55, 0.2);
         }
-
         @media (max-width: 768px) {
             .products-grid {
                 margin-top: 20px;
@@ -177,7 +162,6 @@
 </head>
 <body>
     <div class="overlay">
-
         <div class="main-container">
             <div class="products-grid">
                 
@@ -189,14 +173,12 @@
                             Professional 7-Band Parametric Equalizer inspired by classic boutique hardware with pristine harmonic saturation.
                         </p>
                     </div>
-
                     <div class="cta-buttons">
-                        <!-- Stripe Live-Link für EQ -->
-                        <a href="https://buy.stripe.com/3cI9AT9UA84o13N7XP1Jm01" class="btn btn-primary" target="_blank">VPPEQ-1 Kaufen (39,99 €)</a>
+                        <!-- Stripe Live Link für EQ -->
+                        <a href="DEIN_STRIPE_LIVE_LINK_EQ" class="btn btn-primary" target="_blank">VPPEQ-1 Kaufen (39,99 €)</a>
                         <!-- Installer Download EQ -->
-                        <a href="https://github.com/vir2ose-code/VPPEQ-1-Equalizer/releases/download/v1.0.0/VPPEQ-1_Setup_v1.0.0.exe" class="btn btn-secondary" target="_blank">14-Tage Trial Download</a>
+                        <a href="https://github.com/vir2ose-code/BLUE-VECTOR-LINE/releases/download/v1.0.0/VPPEQ-1_Setup_v1.0.0.exe" class="btn btn-secondary" target="_blank">14-Tage Trial Download</a>
                     </div>
-
                     <div class="feature-list">
                         <div class="feature-item">4 Analog Curves (SSL, NEVE, API, PULTEC)</div>
                         <div class="feature-item">High-Precision JUCE C++ DSP Engine</div>
@@ -212,14 +194,12 @@
                             Precision VCA/Opto Dynamic Compressor with 60fps dynamic curve display and golden fader controls.
                         </p>
                     </div>
-
                     <div class="cta-buttons">
-                        <!-- Stripe Live-Link für Compressor -->
+                        <!-- Stripe Live Link für Compressor -->
                         <a href="https://buy.stripe.com/5kQ8wPaYE5Wg6o75PH1Jm00" class="btn btn-primary" target="_blank">VDC 2.0 Kaufen (39,99 €)</a>
-                        <!-- Direkter Release-Download für Compressor -->
+                        <!-- Release Download Compressor -->
                         <a href="https://github.com/vir2ose-code/BLUE-VECTOR-LINE/releases/download/v2.0.0/VDC_2.0_Installer_x64.exe" class="btn btn-secondary" target="_blank">14-Tage Trial Download</a>
                     </div>
-
                     <div class="feature-list">
                         <div class="feature-item">60fps Dynamic Transfer Curve & Neon Indicator</div>
                         <div class="feature-item">4 EQ Characters influencing Compression Knee</div>
@@ -227,18 +207,38 @@
                     </div>
                 </div>
 
+                <!-- PRODUKT 3: FREQUENCY PHASE ANALYSER VFPA 1.0 -->
+                <div class="product-card">
+                    <div>
+                        <h1 class="product-title">VFPA 1.0 Analyser</h1>
+                        <p class="product-subtitle">
+                            Professional Real-Time Frequency & Phase Alignment Visualizer with EBU R128 Loudness Metering & Vectorscope.
+                        </p>
+                    </div>
+                    <div class="cta-buttons">
+                        <!-- Stripe Live Link für VFPA 1.0 (Fügst du gleich ein!) -->
+                        <a href="DEIN_STRIPE_LIVE_LINK_VFPA" class="btn btn-primary" target="_blank">VFPA 1.0 Kaufen (39,99 €)</a>
+                        <!-- Release Download VFPA 1.0 -->
+                        <a href="https://github.com/vir2ose-code/BLUE-VECTOR-LINE/releases/download/v3.0.0/VFPA_1.0_Installer_x64.exe" class="btn btn-secondary" target="_blank">14-Tage Trial Download</a>
+                    </div>
+                    <div class="feature-list">
+                        <div class="feature-item">Real-Time FFT Spectrum & Peak Hold Display</div>
+                        <div class="feature-item">M/S Stereo Goniometer & Vectorscope</div>
+                        <div class="feature-item">EBU R128 LUFS & 4x Oversampled True Peak</div>
+                    </div>
+                </div>
+
             </div>
         </div>
-
         <footer>
             &copy; 2026 vir2oseSOUND / Waldemar Krucinski. All rights reserved.
         </footer>
     </div>
-
     <!-- Unsichtbare Bilder für KVR Audio / externe Einbindungen -->
     <div style="display: none !important; visibility: hidden;">
         <img src="vdc2.png" alt="VDC 2.0 Compressor Preview">
         <img src="vppeq-1.png" alt="VPPEQ-1 Equalizer Preview">
+        <img src="vfpa1.png" alt="VFPA 1.0 Analyser Preview">
     </div>
 </body>
 </html>
