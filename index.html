@@ -9,8 +9,6 @@
             --gold-main: #ffd700;
             --gold-dark: #b8860b;
             --gold-glow: rgba(255, 215, 0, 0.4);
-            --sale-red: #ff3344;
-            --sale-glow: rgba(255, 51, 68, 0.5);
             --bg-dark: rgba(10, 10, 12, 0.85);
             --card-bg: rgba(15, 18, 25, 0.82);
             --text-light: #f3f4f6;
@@ -75,26 +73,6 @@
             border-color: var(--gold-main);
             transform: translateY(-5px);
         }
-        /* Flash Sale Badge Styling */
-        .sale-card {
-            border: 1.5px solid var(--sale-red);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.8), 0 0 20px var(--sale-glow);
-        }
-        .sale-badge {
-            position: absolute;
-            top: -14px;
-            right: 18px;
-            background: linear-gradient(135deg, #ff3344 0%, #b3001e 100%);
-            color: #fff;
-            font-size: 0.78rem;
-            font-weight: 900;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            padding: 5px 14px;
-            border-radius: 20px;
-            box-shadow: 0 4px 15px rgba(255, 51, 68, 0.6);
-            border: 1px solid rgba(255, 255, 255, 0.4);
-        }
         .product-title {
             font-size: 2rem;
             font-weight: 900;
@@ -136,24 +114,6 @@
             transform: translateY(-2px);
             box-shadow: 0 0 25px rgba(255, 215, 0, 0.7);
             background: linear-gradient(135deg, #ffe033 0%, #d49b0e 100%);
-        }
-        /* Flash Sale Button */
-        .btn-sale {
-            background: linear-gradient(135deg, #ff3344 0%, #cc0022 100%);
-            color: #fff;
-            border: 1px solid #ff6677;
-            box-shadow: 0 0 15px var(--sale-glow), inset 0 1px 0 rgba(255,255,255,0.4);
-        }
-        .btn-sale:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 0 25px rgba(255, 51, 68, 0.8);
-            background: linear-gradient(135deg, #ff4d5e 0%, #e60026 100%);
-        }
-        .old-price {
-            text-decoration: line-through;
-            opacity: 0.7;
-            font-size: 0.88em;
-            margin-right: 4px;
         }
         /* Dunkler Button (Trial Download) */
         .btn-secondary {
@@ -206,9 +166,8 @@
         <div class="main-container">
             <div class="products-grid">
                 
-                <!-- PRODUKT 1: VPPEQ-1 EQUALIZER (FLASH SALE AKTIV) -->
-                <div class="product-card sale-card">
-                    <div class="sale-badge">🔥 70% OFF FLASH SALE</div>
+                <!-- PRODUKT 1: VPPEQ-1 EQUALIZER -->
+                <div class="product-card">
                     <div>
                         <h1 class="product-title">VPPEQ-1 Equalizer</h1>
                         <p class="product-subtitle">
@@ -216,9 +175,9 @@
                         </p>
                     </div>
                     <div class="cta-buttons">
-                        <!-- Stripe Live Link mit automatischem 70% Rabattcode FLASH70 -->
-                        <a href="https://buy.stripe.com/cNidR95Ek98sdQzemd1Jm03?prefilled_promo_code=FLASH70" class="btn btn-sale" target="_blank">
-                            VPPEQ-1 Kaufen <span class="old-price">39,99 €</span> 11,99 €
+                        <!-- Stripe Live Link für VPPEQ-1 -->
+                        <a href="https://buy.stripe.com/cNidR95Ek98sdQzemd1Jm03" class="btn btn-primary" target="_blank">
+                            VPPEQ-1 Kaufen (39,99 €)
                         </a>
                         <!-- Installer Download EQ -->
                         <a href="https://github.com/vir2ose-code/BLUE-VECTOR-LINE/releases/download/v1.0.0/VPPEQ-1_Setup_v1.0.0.exe" class="btn btn-secondary" target="_blank">14-Tage Trial Download</a>
