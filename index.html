@@ -147,12 +147,47 @@
         }
         footer {
             width: 100%;
-            padding: 1.2rem 0;
+            padding: 1.8rem 1rem;
             text-align: center;
-            color: #6b7280;
+            color: #8a8d9b;
             font-size: 0.85rem;
-            background-color: rgba(5, 5, 5, 0.95);
-            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            background-color: rgba(5, 5, 8, 0.95);
+            border-top: 1px solid rgba(212, 175, 55, 0.25);
+            line-height: 1.6;
+        }
+        .footer-company {
+            color: #e5e7eb;
+            font-weight: 500;
+        }
+        .footer-links {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+        .footer-links a {
+            color: #d4af37;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.82rem;
+            letter-spacing: 0.03em;
+            transition: color 0.2s, text-shadow 0.2s;
+        }
+        .footer-links a:hover {
+            color: #ffd700;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+            text-decoration: underline;
+        }
+        .footer-sep {
+            color: rgba(212, 175, 55, 0.35);
+            font-size: 0.75rem;
+        }
+        .footer-sub {
+            margin-top: 8px;
+            font-size: 0.76rem;
+            color: #6b7280;
         }
         @media (max-width: 768px) {
             .products-grid {
@@ -234,7 +269,18 @@
             </div>
         </div>
         <footer>
-            &copy; 2026 vir2oseSOUND / Waldemar Krucinski. All rights reserved.
+            <div class="footer-company">&copy; 2026 <strong>vir2oseSOUND</strong> &bull; Waldemar Krucinski (Dipl. Audio Engineer HOFA)</div>
+            <div class="footer-sub">Lippertweg 3 &bull; 30419 Hannover, Germany &bull; vir2ose@gmail.com</div>
+            <div class="footer-links">
+                <a href="legal.html#imprint">Imprint / Legal Notice</a>
+                <span class="footer-sep">&bull;</span>
+                <a href="legal.html#privacy">Privacy Policy</a>
+                <span class="footer-sep">&bull;</span>
+                <a href="legal.html#terms">Terms of Service</a>
+                <span class="footer-sep">&bull;</span>
+                <a href="legal.html#refund">Refund Policy</a>
+            </div>
+            <div class="footer-sub">Authorized Reseller &amp; Merchant of Record: Paddle.com Market Ltd. &bull; Buy it once, own it forever.</div>
         </footer>
     </div>
     <!-- Preload / Unsichtbare Bilder für KVR Audio & Externe Einbindungen -->
