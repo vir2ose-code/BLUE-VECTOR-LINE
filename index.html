@@ -4,6 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>vir2oseSOUND | Blue Vector Line VST3 Plugins</title>
+    <!-- Paddle.js v2 SDK & Overlay Integration -->
+    <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+    <script>
+        Paddle.Environment.set("production");
+        Paddle.Initialize({ 
+            token: "live_c448056df1b856fe9ffc9733d56" // Paddle Seller Client-Token (aus Developer Tools > Authentication)
+        });
+
+        function buyPlugin(priceId) {
+            if (!priceId || priceId.startsWith('HIER_')) {
+                alert('Bitte hinterlege zuerst die gültige Paddle Price-ID für dieses Plugin.');
+                return;
+            }
+            Paddle.Checkout.open({
+                items: [{ priceId: priceId, quantity: 1 }]
+            });
+        }
+    </script>
     <style>
         :root {
             --gold-main: #ffd700;
@@ -210,8 +228,8 @@
                         </p>
                     </div>
                     <div class="cta-buttons">
-                        <!-- Stripe Live Link für VPPEQ-1 -->
-                        <a href="https://buy.stripe.com/cNidR95Ek98sdQzemd1Jm03" class="btn btn-primary" target="_blank">
+                        <!-- Paddle Checkout für VPPEQ-1 -->
+                        <a href="javascript:void(0)" class="btn btn-primary" onclick="buyPlugin('pri_01m4rr10a6wk4sz8c15jh90g39')">
                             VPPEQ-1 Kaufen (39,99 €)
                         </a>
                         <!-- Installer Download EQ -->
@@ -233,8 +251,8 @@
                         </p>
                     </div>
                     <div class="cta-buttons">
-                        <!-- Stripe Live Link für Compressor -->
-                        <a href="https://buy.stripe.com/5kQ8wPaYE5Wg6o75PH1Jm00" class="btn btn-primary" target="_blank">VDC 2.0 Kaufen (39,99 €)</a>
+                        <!-- Paddle Checkout für VDC 2.0 -->
+                        <a href="javascript:void(0)" class="btn btn-primary" onclick="buyPlugin('HIER_DEINE_PADDLE_PRICE_ID_FUER_VDC_EINSETZEN')">VDC 2.0 Kaufen (39,99 €)</a>
                         <!-- Release Download Compressor -->
                         <a href="https://github.com/vir2ose-code/BLUE-VECTOR-LINE/releases/download/v2.0.0/VDC_2.0_Installer_x64.exe" class="btn btn-secondary" target="_blank">14-Tage Trial Download</a>
                     </div>
@@ -254,8 +272,8 @@
                         </p>
                     </div>
                     <div class="cta-buttons">
-                        <!-- Stripe Live Link für VFPA 1.0 -->
-                        <a href="https://buy.stripe.com/3cI00jgiY5Wg13Nfqh1Jm02" class="btn btn-primary" target="_blank">VFPA 1.0 Kaufen (39,99 €)</a>
+                        <!-- Paddle Checkout für VFPA 1.0 -->
+                        <a href="javascript:void(0)" class="btn btn-primary" onclick="buyPlugin('HIER_DEINE_PADDLE_PRICE_ID_FUER_VFPA_EINSETZEN')">VFPA 1.0 Kaufen (39,99 €)</a>
                         <!-- Release Download VFPA 1.0 (Exakter Dateiname aus v3.0.0 Release) -->
                         <a href="https://github.com/vir2ose-code/BLUE-VECTOR-LINE/releases/download/v3.0.0/FREQUENCY_PHASE_ANALYSER_v1.0.0_VST3_Win64_Installer.exe" class="btn btn-secondary" target="_blank">14-Tage Trial Download</a>
                     </div>
